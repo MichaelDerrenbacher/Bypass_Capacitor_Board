@@ -1,0 +1,646 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Project:TLV3201 U1
+U 1 1 601CB710
+P 4950 4000
+F 0 "U1" H 5444 4046 50  0000 L CNN
+F 1 "TLV3201" H 5444 3955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 4950 4000 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tlv3201.pdf?ts=1612450729346" H 4950 4000 50  0001 C CNN
+	1    4950 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 601CF488
+P 4250 2950
+F 0 "J2" H 4168 3167 50  0000 C CNN
+F 1 "Conn_01x02" H 4168 3076 50  0000 C CNN
+F 2 "Connector:Banana_Jack_2Pin" H 4250 2950 50  0001 C CNN
+F 3 "~" H 4250 2950 50  0001 C CNN
+	1    4250 2950
+	-1   0    0    -1  
+$EndComp
+Text GLabel 4600 2950 2    50   Input ~ 0
+VCC
+$Comp
+L pspice:0 #GND0101
+U 1 1 601CFB4F
+P 4600 3150
+F 0 "#GND0101" H 4600 3050 50  0001 C CNN
+F 1 "0" H 4600 3239 50  0000 C CNN
+F 2 "" H 4600 3150 50  0001 C CNN
+F 3 "~" H 4600 3150 50  0001 C CNN
+	1    4600 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3150 4600 3050
+Wire Wire Line
+	4600 3050 4450 3050
+Wire Wire Line
+	4450 2950 4600 2950
+Text GLabel 5250 3650 2    50   Input ~ 0
+VCC
+$Comp
+L pspice:0 #GND0102
+U 1 1 601D06F7
+P 6300 4400
+F 0 "#GND0102" H 6300 4300 50  0001 C CNN
+F 1 "0" H 6300 4489 50  0000 C CNN
+F 2 "" H 6300 4400 50  0001 C CNN
+F 3 "~" H 6300 4400 50  0001 C CNN
+	1    6300 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3650 5250 3650
+Wire Wire Line
+	5100 3650 5100 3800
+Wire Wire Line
+	6300 4300 6300 4400
+Wire Wire Line
+	4750 4100 4650 4100
+$Comp
+L Device:R_US R1
+U 1 1 601D1787
+P 5900 2600
+F 0 "R1" H 5968 2646 50  0000 L CNN
+F 1 "10k" H 5968 2555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5940 2590 50  0001 C CNN
+F 3 "~" H 5900 2600 50  0001 C CNN
+	1    5900 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 601D21E0
+P 5900 3050
+F 0 "R2" H 5968 3096 50  0000 L CNN
+F 1 "10k" H 5968 3005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5940 3040 50  0001 C CNN
+F 3 "~" H 5900 3050 50  0001 C CNN
+	1    5900 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 601D2AE8
+P 6350 3050
+F 0 "C1" H 6465 3096 50  0000 L CNN
+F 1 "100n" H 6465 3005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6388 2900 50  0001 C CNN
+F 3 "~" H 6350 3050 50  0001 C CNN
+	1    6350 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 601D3AD5
+P 6850 3050
+F 0 "C2" H 6965 3096 50  0000 L CNN
+F 1 "1u" H 6965 3005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6888 2900 50  0001 C CNN
+F 3 "~" H 6850 3050 50  0001 C CNN
+	1    6850 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND0103
+U 1 1 601D41E2
+P 6350 3350
+F 0 "#GND0103" H 6350 3250 50  0001 C CNN
+F 1 "0" H 6350 3439 50  0000 C CNN
+F 2 "" H 6350 3350 50  0001 C CNN
+F 3 "~" H 6350 3350 50  0001 C CNN
+	1    6350 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3350 6350 3200
+Wire Wire Line
+	5900 3200 6350 3200
+Connection ~ 6350 3200
+Wire Wire Line
+	6350 3200 6850 3200
+Wire Wire Line
+	6850 2900 6350 2900
+Connection ~ 6350 2900
+Wire Wire Line
+	6350 2900 5900 2900
+Wire Wire Line
+	5900 2750 5900 2900
+Connection ~ 5900 2900
+Wire Wire Line
+	5900 2450 5900 2350
+Text GLabel 5900 2350 2    50   Input ~ 0
+VCC
+Text GLabel 6850 2900 2    50   Input ~ 0
+In-
+Text GLabel 4600 3900 0    50   Input ~ 0
+In-
+Wire Wire Line
+	4600 3900 4750 3900
+Wire Wire Line
+	5400 4000 5950 4000
+$Comp
+L Connector:Conn_01x02_Female J4
+U 1 1 601D6FCC
+P 6500 4200
+F 0 "J4" H 6528 4176 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 7200 3750 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6500 4200 50  0001 C CNN
+F 3 "~" H 6500 4200 50  0001 C CNN
+	1    6500 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J5
+U 1 1 601D9AA2
+P 6900 4200
+F 0 "J5" H 6928 4176 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 7600 3750 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6900 4200 50  0001 C CNN
+F 3 "~" H 6900 4200 50  0001 C CNN
+	1    6900 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4200 6300 4000
+Connection ~ 6300 4000
+Wire Wire Line
+	6300 4000 6700 4000
+Wire Wire Line
+	6700 4200 6700 4000
+$Comp
+L pspice:0 #GND0104
+U 1 1 601DE65B
+P 6700 4400
+F 0 "#GND0104" H 6700 4300 50  0001 C CNN
+F 1 "0" H 6700 4489 50  0000 C CNN
+F 2 "" H 6700 4400 50  0001 C CNN
+F 3 "~" H 6700 4400 50  0001 C CNN
+	1    6700 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 4300 6700 4400
+$Comp
+L pspice:0 #GND0105
+U 1 1 601DEA40
+P 5100 4300
+F 0 "#GND0105" H 5100 4200 50  0001 C CNN
+F 1 "0" H 5100 4389 50  0000 C CNN
+F 2 "" H 5100 4300 50  0001 C CNN
+F 3 "~" H 5100 4300 50  0001 C CNN
+	1    5100 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4200 5100 4300
+$Comp
+L Device:C C3
+U 1 1 601E3528
+P 2200 3000
+F 0 "C3" H 2315 3046 50  0000 L CNN
+F 1 "C" H 2315 2955 50  0000 L CNN
+F 2 "Socket:Test_strip" H 2238 2850 50  0001 C CNN
+F 3 "~" H 2200 3000 50  0001 C CNN
+	1    2200 3000
+	1    0    0    -1  
+$EndComp
+Text GLabel 3300 2850 2    50   Input ~ 0
+VCC
+$Comp
+L Connector:TestPoint VCC1
+U 1 1 601E6C2C
+P 3850 1900
+F 0 "VCC1" H 3908 2018 50  0000 L CNN
+F 1 "TestPoint" H 3908 1927 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 4050 1900 50  0001 C CNN
+F 3 "~" H 4050 1900 50  0001 C CNN
+	1    3850 1900
+	1    0    0    -1  
+$EndComp
+Text GLabel 3850 2050 2    50   Input ~ 0
+VCC
+Wire Wire Line
+	6250 4000 6300 4000
+$Comp
+L pspice:0 #GND0107
+U 1 1 601E1F2D
+P 4050 4200
+F 0 "#GND0107" H 4050 4100 50  0001 C CNN
+F 1 "0" H 4050 4289 50  0000 C CNN
+F 2 "" H 4050 4200 50  0001 C CNN
+F 3 "~" H 4050 4200 50  0001 C CNN
+	1    4050 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1-1634612-0:1-1634612-0 J1
+U 1 1 601E2CF3
+P 3650 4200
+F 0 "J1" H 3757 4567 50  0000 C CNN
+F 1 "1-1634612-0" H 3757 4476 50  0000 C CNN
+F 2 "1-1634612-0:TE_1-1634612-0" H 3650 4200 50  0001 L BNN
+F 3 "" H 3650 4200 50  0001 L BNN
+F 4 "1" H 3650 4200 50  0001 L BNN "Number_of_Positions"
+F 5 "1-1634612-0" H 3650 4200 50  0001 L BNN "Comment"
+F 6 "Compliant" H 3650 4200 50  0001 L BNN "EU_RoHS_Compliance"
+	1    3650 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 2050 3850 1900
+Wire Wire Line
+	4350 2050 4350 1900
+Text GLabel 6700 4000 2    50   Input ~ 0
+Out
+Text GLabel 4350 2050 2    50   Input ~ 0
+Out
+Wire Wire Line
+	2200 3250 2200 3150
+$Comp
+L pspice:0 #GND0106
+U 1 1 601E4056
+P 2200 3250
+F 0 "#GND0106" H 2200 3150 50  0001 C CNN
+F 1 "0" H 2200 3339 50  0000 C CNN
+F 2 "" H 2200 3250 50  0001 C CNN
+F 3 "~" H 2200 3250 50  0001 C CNN
+	1    2200 3250
+	1    0    0    -1  
+$EndComp
+Connection ~ 2200 3150
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 601F365F
+P 1350 1800
+F 0 "H1" H 1450 1846 50  0000 L CNN
+F 1 "MountingHole" H 1450 1755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_6.4mm_M6_ISO7380_Pad" H 1350 1800 50  0001 C CNN
+F 3 "~" H 1350 1800 50  0001 C CNN
+	1    1350 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 601F3FC0
+P 1350 2050
+F 0 "H2" H 1450 2096 50  0000 L CNN
+F 1 "MountingHole" H 1450 2005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_6.4mm_M6_ISO7380_Pad" H 1350 2050 50  0001 C CNN
+F 3 "~" H 1350 2050 50  0001 C CNN
+	1    1350 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 601F473D
+P 1350 2300
+F 0 "H3" H 1450 2346 50  0000 L CNN
+F 1 "MountingHole" H 1450 2255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_6.4mm_M6_ISO7380_Pad" H 1350 2300 50  0001 C CNN
+F 3 "~" H 1350 2300 50  0001 C CNN
+	1    1350 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 601F4CB7
+P 1350 2550
+F 0 "H4" H 1450 2596 50  0000 L CNN
+F 1 "MountingHole" H 1450 2505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_6.4mm_M6_ISO7380_Pad" H 1350 2550 50  0001 C CNN
+F 3 "~" H 1350 2550 50  0001 C CNN
+	1    1350 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint GND1
+U 1 1 60201AD1
+P 4850 1900
+F 0 "GND1" H 4908 2018 50  0000 L CNN
+F 1 "TestPoint" H 4908 1927 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 5050 1900 50  0001 C CNN
+F 3 "~" H 5050 1900 50  0001 C CNN
+	1    4850 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2050 4850 1900
+$Comp
+L pspice:0 #GND0108
+U 1 1 60202E52
+P 4850 2050
+F 0 "#GND0108" H 4850 1950 50  0001 C CNN
+F 1 "0" H 4850 2139 50  0000 C CNN
+F 2 "" H 4850 2050 50  0001 C CNN
+F 3 "~" H 4850 2050 50  0001 C CNN
+	1    4850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint OUT1
+U 1 1 601EC9B5
+P 4350 1900
+F 0 "OUT1" H 4408 2018 50  0000 L CNN
+F 1 "TestPoint" H 4408 1927 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 4550 1900 50  0001 C CNN
+F 3 "~" H 4550 1900 50  0001 C CNN
+	1    4350 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J3
+U 1 1 60207801
+P 2850 2950
+F 0 "J3" H 2878 2926 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 3550 2500 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2850 2950 50  0001 C CNN
+F 3 "~" H 2850 2950 50  0001 C CNN
+	1    2850 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J6
+U 1 1 602086AA
+P 3250 2950
+F 0 "J6" H 3278 2926 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 3950 2500 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3250 2950 50  0001 C CNN
+F 3 "~" H 3250 2950 50  0001 C CNN
+	1    3250 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2950 2650 2850
+Connection ~ 2650 2850
+Wire Wire Line
+	2650 2850 3050 2850
+Wire Wire Line
+	3050 2950 3050 2850
+Connection ~ 3050 2850
+Wire Wire Line
+	3050 2850 3300 2850
+Wire Wire Line
+	2650 3050 2650 3150
+Wire Wire Line
+	3050 3050 3050 3150
+Wire Wire Line
+	3050 3150 2650 3150
+Connection ~ 2650 3150
+$Comp
+L Device:R_US R4
+U 1 1 6021BAEE
+P 7650 2200
+F 0 "R4" H 7718 2246 50  0000 L CNN
+F 1 "100" H 7718 2155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7690 2190 50  0001 C CNN
+F 3 "~" H 7650 2200 50  0001 C CNN
+	1    7650 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 6021CB6B
+P 7650 2900
+F 0 "D2" V 7689 2782 50  0000 R CNN
+F 1 "LED" V 7598 2782 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7650 2900 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/american-opto-plus-led/L196L-SGC/12325416" H 7650 2900 50  0001 C CNN
+	1    7650 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pspice:0 #GND0109
+U 1 1 6021D69C
+P 7650 3200
+F 0 "#GND0109" H 7650 3100 50  0001 C CNN
+F 1 "0" H 7650 3289 50  0000 C CNN
+F 2 "" H 7650 3200 50  0001 C CNN
+F 3 "~" H 7650 3200 50  0001 C CNN
+	1    7650 3200
+	1    0    0    -1  
+$EndComp
+Text GLabel 7650 1850 2    50   Input ~ 0
+VCC
+Wire Wire Line
+	7650 1850 7650 2050
+Wire Wire Line
+	7650 3050 7650 3200
+$Comp
+L Device:R_US R5
+U 1 1 60225AA2
+P 8300 2200
+F 0 "R5" H 8368 2246 50  0000 L CNN
+F 1 "330" H 8368 2155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 8340 2190 50  0001 C CNN
+F 3 "~" H 8300 2200 50  0001 C CNN
+	1    8300 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 60225AA8
+P 8300 2900
+F 0 "D4" V 8339 2782 50  0000 R CNN
+F 1 "LED" V 8248 2782 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8300 2900 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/american-opto-plus-led/L196L-LIC/12325457" H 8300 2900 50  0001 C CNN
+	1    8300 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pspice:0 #GND0110
+U 1 1 60225AAE
+P 8300 3200
+F 0 "#GND0110" H 8300 3100 50  0001 C CNN
+F 1 "0" H 8300 3289 50  0000 C CNN
+F 2 "" H 8300 3200 50  0001 C CNN
+F 3 "~" H 8300 3200 50  0001 C CNN
+	1    8300 3200
+	1    0    0    -1  
+$EndComp
+Text GLabel 8300 1850 2    50   Input ~ 0
+VCC
+Wire Wire Line
+	8300 1850 8300 2050
+Wire Wire Line
+	8300 3050 8300 3200
+Text Notes 8550 2850 0    50   ~ 0
+1.95V\n
+$Comp
+L Device:LED D3
+U 1 1 6022811B
+P 8300 2550
+F 0 "D3" V 8339 2432 50  0000 R CNN
+F 1 "LED" V 8248 2432 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8300 2550 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/american-opto-plus-led/L196L-LIC/12325457" H 8300 2550 50  0001 C CNN
+	1    8300 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8300 2750 8300 2700
+Wire Wire Line
+	8300 2400 8300 2350
+Text Notes 8550 2500 0    50   ~ 0
+1.95V\n
+$Comp
+L Device:LED D1
+U 1 1 60231F16
+P 7650 2550
+F 0 "D1" V 7689 2432 50  0000 R CNN
+F 1 "LED" V 7598 2432 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7650 2550 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/american-opto-plus-led/L196L-LIC/12325457" H 7650 2550 50  0001 C CNN
+	1    7650 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7650 2350 7650 2400
+Wire Wire Line
+	7650 2700 7650 2750
+Text Notes 7400 2500 0    50   ~ 0
+2V\n
+Text Notes 7400 2850 0    50   ~ 0
+2V\n
+NoConn ~ 4050 4400
+$Comp
+L Connector:TestPoint GND2
+U 1 1 60225837
+P 5350 1900
+F 0 "GND2" H 5408 2018 50  0000 L CNN
+F 1 "TestPoint" H 5408 1927 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 5550 1900 50  0001 C CNN
+F 3 "~" H 5550 1900 50  0001 C CNN
+	1    5350 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2050 5350 1900
+$Comp
+L pspice:0 #GND0111
+U 1 1 6022583E
+P 5350 2050
+F 0 "#GND0111" H 5350 1950 50  0001 C CNN
+F 1 "0" H 5350 2139 50  0000 C CNN
+F 2 "" H 5350 2050 50  0001 C CNN
+F 3 "~" H 5350 2050 50  0001 C CNN
+	1    5350 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint GND3
+U 1 1 60226909
+P 5800 1900
+F 0 "GND3" H 5858 2018 50  0000 L CNN
+F 1 "TestPoint" H 5858 1927 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 6000 1900 50  0001 C CNN
+F 3 "~" H 6000 1900 50  0001 C CNN
+	1    5800 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2050 5800 1900
+$Comp
+L pspice:0 #GND0112
+U 1 1 60226910
+P 5800 2050
+F 0 "#GND0112" H 5800 1950 50  0001 C CNN
+F 1 "0" H 5800 2139 50  0000 C CNN
+F 2 "" H 5800 2050 50  0001 C CNN
+F 3 "~" H 5800 2050 50  0001 C CNN
+	1    5800 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2850 2650 2850
+Wire Wire Line
+	2200 3150 2650 3150
+$Comp
+L Device:R_US R3
+U 1 1 601DD22F
+P 6100 4000
+F 0 "R3" V 6250 3950 50  0000 L CNN
+F 1 "0" V 6168 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6140 3990 50  0001 C CNN
+F 3 "~" H 6100 4000 50  0001 C CNN
+	1    6100 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R6
+U 1 1 6020EC84
+P 4450 4300
+F 0 "R6" V 4600 4250 50  0000 L CNN
+F 1 "100" V 4518 4255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4490 4290 50  0001 C CNN
+F 3 "~" H 4450 4300 50  0001 C CNN
+	1    4450 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND0113
+U 1 1 6020F815
+P 4450 4500
+F 0 "#GND0113" H 4450 4400 50  0001 C CNN
+F 1 "0" H 4450 4589 50  0000 C CNN
+F 2 "" H 4450 4500 50  0001 C CNN
+F 3 "~" H 4450 4500 50  0001 C CNN
+	1    4450 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4450 4450 4500
+Wire Wire Line
+	4450 4150 4450 4100
+Connection ~ 4450 4100
+Wire Wire Line
+	4450 4100 4050 4100
+$Comp
+L Device:R_US R?
+U 1 1 60216011
+P 4650 4300
+F 0 "R?" V 4800 4250 50  0000 L CNN
+F 1 "100" V 4718 4255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4690 4290 50  0001 C CNN
+F 3 "~" H 4650 4300 50  0001 C CNN
+	1    4650 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 60216017
+P 4650 4500
+F 0 "#GND?" H 4650 4400 50  0001 C CNN
+F 1 "0" H 4650 4589 50  0000 C CNN
+F 2 "" H 4650 4500 50  0001 C CNN
+F 3 "~" H 4650 4500 50  0001 C CNN
+	1    4650 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 4450 4650 4500
+Wire Wire Line
+	4650 4150 4650 4100
+Connection ~ 4650 4100
+Wire Wire Line
+	4650 4100 4450 4100
+$EndSCHEMATC
